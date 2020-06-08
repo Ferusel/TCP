@@ -1,0 +1,113 @@
+{% extends "layout.html" %} 
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/ingredientSelection.css') }}">
+    <!-- Alerts -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class=flashes>
+            {% for message in messages %}
+            <div class='alert alert-success fade show' role='alert'>
+                <strong>{{ message }}</strong>
+                <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+            </div>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+    {% if error %}
+        <div class='alert alert-warning fade show' role='alert'>
+            <strong class='error'>{{error}}</strong>
+            <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+        </div>
+    {% endif %}
+
+    <!-- Overall Form -->
+        <form class='form-group form-control bg-light' action='/specificRecipes' method='POST'>
+            <fieldset class='form-group'>
+            <div class="d-flex justify-content-around mb-3">
+                <!-- Type of cuisine -->
+                <fieldset id="menu" class="d-flex justify-content-around border border-secondary p-3">
+                    <legend class='border-bottom text-center'><h3 class="text-center pb-3" id="header">Cuisine</h3></legend>
+                    <div class="container btn-group-justified">
+                        <div class="row radio-toolbar">
+                            <input type="radio" id="asian" name="cuisineType" value="asian">
+                            <label for="asian">Asian</label>
+                            <input type="radio" id="western" name="cuisineType" value="western">
+                            <label for="western">Western</label>
+                        </div>
+                        <div class="row radio-toolbar">
+                            <input type="radio" id="indian" name="cuisineType" value="indian">
+                            <label for="indian">Indian</label>
+                            <input type="radio" id="carribean" name="cuisineType" value="carribean">
+                            <label for="carribean">Carribean</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- Mealtype -->
+                <fieldset id="menu" class="d-flex justify-content-around border border-secondary p-3">
+                    <legend class='border-bottom text-center'><h3 class="text-center pb-3" id="header">Meal</h3></legend>
+                    <div class="container btn-group-justified">
+                        <div class="row radio-toolbar">
+                            <input type="radio" id="breakfast" name="mealType" value="breakfast">
+                            <label for="breakfast">Breakfast</label>
+                            <input type="radio" id="lunch" name="mealType" value="lunch">
+                            <label for="lunch">Lunch</label>
+                        </div>
+                        <div class="row radio-toolbar">
+                            <input type="radio" id="dinner" name="mealType" value="dinner">
+                            <label for="dinner">Dinner</label>
+                            <input type="radio" id="supper" name="mealType" value="supper">
+                            <label for="supper">Dessert</label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <hr class="mb-3 bg-secondary" style="height: 0.5px;">
+
+            <div class="container">
+            
+            <div class="row">
+            <!-- Number of ingredients -->
+            <form class='form-group form-control bg-white' method='POST' action='/ingredientSelection'>
+                <div class='col-4 input-group mb-3 d-flex align-items-center border border-secondary p-3'>
+                    <legend class="border-bottom text-center" id="header-small">Number of <br> Ingredients</legend>
+                    <input type='number' class='form-control align-self-start border border-secondary' placeholder='Input number' name='ing_amt'>
+                    <div class='input-group-append align-self-start ml-1'>
+                        <button class='btn btn-outline-secondary ' type='submit' formaction='/ingredientSelection'>Update</button>
+                    </div>
+                </div>
+            </form>
+            <div class="col-1"></div>
+            <!-- Enter ingredients -->
+            <fieldset id="ing-list" class='col-7 form-group form-control border border-dark p-4'>
+                <legend><h3 class="text-center pb-3" id="header">Ingredients</h3></legend>
+                <div name='inglist'>
+                    {% for ing in range(1, ing_amt|int+1) %}
+                        <div class='input-group mb-3'>
+                            <div class='input-group-prepend'>
+                                <span class='input-group-text' id='ing-input'>{{ing}}</span>
+                            </div>
+                            <input type='text' class='form-control' aria-label='Default' aria-describedby='inputGroup-sizing-default' name='inglist' required>
+                        </div>
+                    {% endfor %}
+                </div>
+            </fieldset>
+
+            </div>
+            <!-- Follow strictly or not -->
+            <div class='form-check'>
+                <input class='form-check-input' type='checkbox' value='True' id='follow-strictly' name='follow-strictly'>
+                <label class='form-check-label' for='follow-strictly'>
+                    <i style="font-family: 'Poppins'; font-size: 1.2em;">Follow the ingredients strictly?</i>
+                </label>
+            </div>
+            </div>
+            <hr class="mb-3 bg-secondary" style="height: 0.5px;"> 
+            <!--Submit -->
+            <button class='btn btn-block text-center' type='submit' id="submit-btn"><h3>Let's Go!</h3></button>
+            <hr class="mb-3 bg-secondary" style="height: 0.5px; width: 80%;">
+            </fieldset>
+        </form>
+
+
+{% endblock content %}

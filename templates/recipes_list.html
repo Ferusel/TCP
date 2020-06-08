@@ -1,0 +1,24 @@
+{% extends "layout.html" %} 
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/recipe_list.css') }}">
+    <div class="d-flex flex-column justify-content-center">
+    <span class='border border-secondary text-center' id="header"}>Here are some suggested recipes!</span>
+    <!-- Content -->
+    {% for recipe_row in recipes %}
+        <section class='container d-flex flex-row justify-content-around'>
+        {% for recipe in recipe_row %}
+            <div class='card p2 col m-2'>
+                <img src={{ recipe['image'] }} class='card-img-top img-fluid' alt='image'>
+                <div class='card-body'>
+                    <h5 class='card-title' id="recipe-title">{{ recipe['title'] }}</h5>
+                    <p class='card-text'id="recipe-link">Source: {{ recipe['recipe_link'] }}</p>
+                    <form action='/recipePage' method='post'>
+                        <button class="btn-outline-secondary" type='submit' value={{ recipe ['recipe_link'] }} name='link' id="to-recipe-btn">View Recipe</button>
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+        </section>
+    {% endfor %}
+    </div>
+{% endblock content %}

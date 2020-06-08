@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/homepage.css') }}">
+<div class="jumbotron d-flex flex-column">
+    <div class="d-flex justify-content-center">
+        <h1 class="display-4" id="jumbotron-header-1">The Crock Pot</h1>
+    </div>
+    <hr class="my-4" id="jumbotron-hr-1">
+    <p id="jumbotron-desc"> Search <br> for what to cook<br> with what you have</p>
+    <hr id="jumbotron-hr-2" class="border border-secondary">
+
+    <div id="button-grp" class="d-flex justify-content-center">
+        <form action={{ url_for('about') }}><input type="submit" class="display-4 flex-fill BUTTON_MENU mx-5" value="Find Out More"></form>
+        <form action={{url_for('ingredientSelection')}}><input type="submit"
+                class="display-4 flex-fill BUTTON_MENU mx-5" value="Try it out"></form>
+    </div>
+    <!-- Footer -->
+    <footer class="pt-4">
+
+        <!-- Footer Links -->
+        <div id="footer-top" class="container-fluid text-center p-3">
+            <!-- Grid row -->
+            <div class="row">
+                <div class="col-2"></div>
+                <!-- Grid column -->
+                <div class="col-5">
+                    <!-- Content -->
+                    <h4 class="text-uppercase">Acknowledgements</h5>
+                    <p>I don't own any recipes you find on this website. These were scraped from the websites (on the right), and I simply sorted them out according to user preference. Click About to find out more.</p>
+                </div>
+                <!-- Grid column -->
+                <div class="col-4">
+                    <!-- Links -->
+                    <h4 class="text-uppercase">Websites Scraped</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="www.allrecipes.com">AllRecipes</a>
+                        </li>
+                        <li>
+                            <a href="www.foodnetwork.com">Food Network</a>
+                        </li>
+                        <li>
+                            <a href="www.seriouseats.com">SeriousEats</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-2"></div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div id="copyright" class="text-center py-3">© 2020 Copyright:
+            <a href="#"> copyright-placeholder</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+</div>
+{% endblock content %}

@@ -1,0 +1,9 @@
+Flask
+Flask-Session
+requests
+flask_wtf
+bs4
+numpy
+fuzzywuzzy
+gunicorn
+psychopg2

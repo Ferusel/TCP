@@ -1,0 +1,40 @@
+#title{
+    font-family: 'Oswald', 'Spartan';
+    font-size: 5em;
+}
+
+.img{
+    width: 70%;
+    height: 50%;
+    object-fit:cover;
+}
+
+#caption{
+    font-size: 1.1em;
+    font-family: 'Poppins', 'Spartan';
+}
+
+.hr{
+    width: 80%;
+}
+
+#ingredients > legend{
+    font-family: 'Spartan', 'Poppins';
+    font-size: 1.3em;
+}
+
+#steps > legend{
+    font-family: 'Spartan', 'Poppins';
+    font-size: 1.3em;
+}
+
+#ingredients,#steps{
+    font-family: 'Poppins';
+    font-size: 1.3em;
+}
+
+footer{
+    font-family: 'Poppins';
+    font-style: italic;
+    font-size: 1.2em;
+}

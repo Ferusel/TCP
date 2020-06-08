@@ -1,0 +1,19 @@
+website core features:
+    thorough wireframe for website pages
+    read css / html notes again
+    format all frontend pages
+    style all frontend pages
+
+css for pages to write:
+    remember to revise bootstrap, html, css basics first
+    1) navbar
+    2) ingredientSelection.html
+    3) generalRecipes.html
+    4) recipePage.html
+
+additional features to add:
+    1) secret tkc password (creation of our whatsapp group) linking to comment section(?)
+    2) general recipes should grab from front page of each website
+    3) ! Recipe randomizer what to cook !
+    4) loading page 
+

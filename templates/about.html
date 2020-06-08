@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/about.css') }}">
+<header class="item justify-content-center p-5">
+    <span class="px-3"> The Crock Pot </span>
+    <img src="https://i.ibb.co/0C91Rtc/crockpot-icon.png" class="rounded-circle border border-dark p-1">
+    <span class="break"></span>
+    <div> About The Website </div>
+    <span class="break"></span>
+    <hr>
+</header>
+<main>
+    <div class="sep-1">
+        <fieldset id="fieldset" class="desc m-3 p-3 border border-secondary">
+            <legend id="legend-1">What's this website about?</legend>
+            <p> This website is a webcrawler for food recipes, scrapped from three websites <i>(see footer)</i>.
+                Somtimes, it's pretty inconvenient to find a recipe, only to learn you don't have all the ingredients
+                for it. Using this website, you can specify recipes for ingredients that you <i>do</i> have, which makes
+                things more convenient!<br><br>
+
+                <strong>Disclaimer:</strong> I do NOT own any recipes you find here. As mentioned, I scrapped them from
+                the websites. All recipes belong to the owners that wrote them!</p>
+        </fieldset>
+    </div>
+    <div class="sep-2">
+        <fieldset id="fieldset" class="desc m-3 p-3 border border-secondary">
+            <legend id="legend-2">Where did this come from?</legend>
+            <p>The Crock Pot is a project that I embarked on after learning <i>very basic</i> web development from <a
+                    href="https://www.edx.org/course/cs50s-introduction-to-computer-science">Harvard's CS50 Course</a>,
+                and acts as my final project for the course. As countries worldwide entered various stages of lockdown
+                during the COVID-19 Pandemic, carrying out daily routines such as cooking and grocery shopping became
+                increasingly difficult and expensive. I realized there was a need to maximize and stretch the food we
+                had at home, but I found it troublesome to trawl through recipe after recipe to find one that I could
+                actually cook, thus The Crock Pot was born.<br><br>
+
+                Although still in its early stages, I do think this website has potential to be something. As I continue
+                improving on its functions and (hopefully) not get sued by the websites I'm scraping from, I hope to
+                create something that will be useful to everyone, as we continue battling against the COVID-19 Pandemic
+                (and food waste in general!).<br><br>
+
+                As I was researching on this problem, I came across this <a
+                    href="https://www.reddit.com/r/Cooking/comments/f0qjm9/what_the_coronavirus_forcing_me_in_lockdowns/">
+                    reddit post</a> that highlighted the problem I mentioned, but at the extremes. I hope things improve
+                soon.
+            </p>
+        </fieldset>
+    </div>
+    <div class="sep-1">
+        <fieldset id="fieldset" class="desc m-3 p-3 border border-secondary">
+            <legend id="legend-1">Hey, your website sucks!</legend>
+            <p> Owing to my general inexperience at coding, with The Crock Pot being my first <i>serious</i> project
+                learning code from the ground-up, I recognize I have much to learn. Yes, as of writing, my website
+                sucks. In fact, I don't think anyone would even use this thing. I don't even know why I'm writing this
+                About page <i>(but if you're here, I'm grateful for the company)</i>. <br><br>
+
+                Nevertheless, I will steadily improve my skills, and I hope to improve upon The Crock Pot steadily.
+                <strong>If you wish to criticize my work and help me improve, you can do so <a href="#">here</a>. I
+                    gladly appreciate it!</strong></p>
+        </fieldset>
+    </div>
+    <div class="sep-2">
+        <fieldset id="fieldset" class="desc m-3 p-3 border border-secondary">
+            <legend id="legend-2">Credits/Sources</legend>
+            <p>Scattered throughout this site, I would like to say it once more: <strong>I do NOT own any recipes on
+                    this site!</strong> I just scraped them from Allrecipes, SeriousEats, and Foodnetwork <i>Links in
+                    Footer</i>.<br><br>
+
+                To create the website, I used the Python Flask framework, along with basic HTML/CSS, and used Bootstrap
+                to beautify the site.</p>
+        </fieldset>
+    </div>
+</main>
+<hr class="my-3 bg-secondary">
+<footer class="pt-4">
+
+    <!-- Footer Links -->
+    <div id="footer-top" class="container-fluid text-center p-3">
+        <!-- Grid row -->
+        <div class="row">
+            <div class="col-2"></div>
+            <!-- Grid column -->
+            <div class="col-5">
+                <!-- Content -->
+                <h4 class="text-uppercase">Acknowledgements</h5>
+                    <p>I don't own any recipes you find on this website. These were scraped from the websites (on the
+                        right), and I simply sorted them out according to user preference. Click About to find out more.
+                    </p>
+            </div>
+            <!-- Grid column -->
+            <div class="col-4">
+                <!-- Links -->
+                <h4 class="text-uppercase">Websites Scraped</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="allrecipes.com">AllRecipes</a>
+                        </li>
+                        <li>
+                            <a href="foodnetwork.com">Food Network</a>
+                        </li>
+                        <li>
+                            <a href="seriouseats.com">SeriousEats</a>
+                        </li>
+                    </ul>
+            </div>
+            <div class="col-2"></div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div id="copyright" class="text-center py-3">© 2020 Copyright:
+        <a href="#"> copyright-placeholder</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+{% endblock content %}

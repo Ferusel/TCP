@@ -1,0 +1,101 @@
+#jumbotron-header-1 {
+    font-family: "Bebas Neue", "Spartan";
+    font-size: 1100%;
+    color: black;
+    text-align: center;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+}
+
+#jumbotron-hr-1 {
+    height: 4px;
+    background-color: rgb(253, 197, 93);
+    position: relative;
+    top: -10%;
+}
+
+#jumbotron-desc {
+    font-family: "Montserrat", "Spartan";
+    font-weight: 80%;
+    text-align: center;
+    font-size: 350%;
+    word-spacing: 30%;
+    color: black;
+    line-height: 90%;
+    -webkit-text-stroke-width: 0.7px;
+    -webkit-text-stroke-color: white;
+    position: relative;
+    top: -8%;
+}
+
+#jumbotron-hr-2 {
+    width: 80%;
+    position: relative;
+    top: -10%;
+}
+
+#button-grp{
+    position: relative;
+    top: -5%;
+}
+
+.BUTTON_MENU {
+    background: #f37836;
+    background-image: -webkit-linear-gradient(top, #f37836, #d34c03);
+    background-image: -moz-linear-gradient(top, #f37836, #d34c03);
+    background-image: -ms-linear-gradient(top, #f37836, #d34c03);
+    background-image: -o-linear-gradient(top, #f37836, #d34c03);
+    background-image: linear-gradient(to bottom, #f37836, #d34c03);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    color: #ffffff;
+    font-family: Open Sans;
+    font-size: 48px;
+    font-weight: 100;
+    padding: 25px;
+    box-shadow: 0px 0px 10px 0px #876c5e;
+    -webkit-box-shadow: 0px 0px 10px 0px #876c5e;
+    -moz-box-shadow: 0px 0px 10px 0px #876c5e;
+    text-shadow: 1px 1px 20px #61351d;
+    border: dotted #dc682a 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 500ms ease-out 1s;
+}
+
+.BUTTON_MENU:hover, .BUTTON_MENU:focus {
+    background: #f37836;
+    border: dotted #dc682a 1px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.jumbotron {
+    height: 100%;
+    background-image: url("https://serving.photos.photobox.com/340945056f54d2276873e9b4119723d68b4d90bf2f191de66e553d2a25e6186ad9a698f3.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* Original Image: https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80 */
+
+footer>div{
+    background-color: rgba(252, 222, 166, 0.5);
+    font-family: 'Spartan', 'Poppins';
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+#copyright{
+    background-color: rgba(252, 181, 51, 0.5);
+    font-family: 'Spartan', 'Poppins';
+    font-size: 1.1em;
+}

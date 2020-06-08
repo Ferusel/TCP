@@ -1,0 +1,60 @@
+.navbar .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    animation-name: animation;
+    animation-fill-mode: forwards;
+    background-color: rgb(236, 156, 113);
+    color: #FFC0CB;
+    transition: 0.3s;
+}
+
+#keyframes animation{
+    0%{
+        background: rgb(243, 120, 54);
+    }
+    100%{
+        background: rgb(236, 156, 113);
+    }
+}
+
+#navbar-body{
+    background-color: rgb(243, 120, 54);
+}
+
+#navbar-elements{
+    font-size: 1.8em;
+    font-family: 'Spartan', sans-serif;
+    color: white;
+}
+
+#brand-wording{
+    font-family: 'Bebas Neue', 'Spartan'; 
+    color: white; 
+    font-size: 400%;
+    /* position: relative;
+    top: 15%; */
+}
+
+#navbar-brand:hover, #navbar-brand:focus{
+    color: rgb(255, 221, 202);
+}
+
+.navbar-brand{
+    background-color: #F37430;
+}
+
+#navbar-decorator{
+    background-color: rgb(243, 215, 215);
+    width: 100%;
+    height: 1em;
+}
+
+#main-margin{
+    background: linear-gradient(rgb(255, 251, 199, 0.2), rgba(243, 120, 54, 0.5));
+}
+
+html,body{
+    height: 100%;
+}
+
+.flex-fill{
+    flex: 1;
+}

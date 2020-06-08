@@ -1,0 +1,22 @@
+#header{
+    font-family: 'Bebas Neue', 'Spartan'; 
+    font-style: bold; 
+    font-size: 4em;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    background-image: url("https://serving.photos.photobox.com/340945056f54d2276873e9b4119723d68b4d90bf2f191de66e553d2a25e6186ad9a698f3.jpg");
+} 
+
+#to-recipe-btn{
+    font-size: 1.3em;
+}
+
+#recipe-title{
+    font-size: 1.5em;
+}
+
+#recipe-link{
+    font-size: 1.1em;
+    font-family: 'Poppins';
+    font-style: italic;
+}
